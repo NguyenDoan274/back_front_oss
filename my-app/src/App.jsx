@@ -22,7 +22,7 @@ function App() {
       {/* Header */}
       <header className="header">
         <div className="container header-content">
-          <div className="logo">GIẢI TRÍ 24H</div>
+          <div className="logo">GIẢI TRÍ 365H</div>
           <nav className="nav">
             <a href="#">Sao</a>
             <a href="#">Phim ảnh</a>
