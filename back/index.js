@@ -13,7 +13,7 @@ const PORT = process.env.PORT || 3000;
 const newsList = [
     {
       id: 1,
-      title: "Backend Node.js đã chạy thành công trên Render!",
+      title: "Đây là tin tức từ API sau lần commit",
       date: "15/12/2025",
       image: "https://images.unsplash.com/photo-1633356122544-f134324a6cee?auto=format&fit=crop&q=80&w=600",
       summary: "Đây là dữ liệu được lấy từ API của bạn chứ không phải code cứng trong React nữa."

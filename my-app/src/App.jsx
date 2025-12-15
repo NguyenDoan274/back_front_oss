@@ -8,7 +8,7 @@ function App() {
 
   // Gọi API từ Backend khi web vừa tải xong
   useEffect(() => {
-    fetch('https://back-node-anz7.onrender.com/api/news')
+    fetch('https://back-front-oss.onrender.com/api/news')
       .then(response => response.json())
       .then(data => {
         console.log("Dữ liệu tải về:", data);
