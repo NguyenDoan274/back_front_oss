@@ -1,0 +1,30 @@
+# File: docker-compose.yml
+version: '3.8'
+
+services:
+  # Cấu hình cho Backend
+  backend:
+    build: ./back          # Đường dẫn tới thư mục chứa Dockerfile backend
+    container_name: news-backend
+    ports:
+      - "3000:3000"        # Map cổng 3000 của máy bạn vào 3000 của container
+    environment:
+      - PORT=3000
+    networks:
+      - app-network
+
+  # Cấu hình cho Frontend
+  frontend:
+    build: ./my-app        # Đường dẫn tới thư mục chứa Dockerfile frontend
+    container_name: news-frontend
+    ports:
+      - "8080:80"          # Web sẽ chạy ở localhost:8080 (vì cổng 80 hay bị trùng)
+    depends_on:
+      - backend            # Đợi backend chạy xong mới chạy frontend
+    networks:
+      - app-network
+
+# Tạo mạng nội bộ để 2 cái nhìn thấy nhau (nếu cần)
+networks:
+  app-network:
+    driver: bridge
